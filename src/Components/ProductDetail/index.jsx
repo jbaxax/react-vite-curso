@@ -19,7 +19,7 @@ const ProductDetail = () => {
             </div>
             <figure className='px-6'>
                 <img className="w-full h-full rounded-lg"
-                 src={context.productToSHow.images[0]} 
+                 src={context.productToSHow.images} 
                  alt={context.productToSHow.title} />
             </figure>
             <p className='flex flex-col p-6 '>

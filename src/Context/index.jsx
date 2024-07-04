@@ -7,13 +7,21 @@ export const ShoppingCartProvider = ({children}) => {
     // Shopping Cart - Increment quantity
     const [count,setCount] = useState(0);
 
-     //ProductDetail - OpenClose
+    //Product Detail - OpenClose
     const [isProductDetailOpen,setIsProductDetailOpen] = useState(false);
     const openProductDetail = () => setIsProductDetailOpen(true);
     const closeProductDetail = () => setIsProductDetailOpen(false);
 
+     //Checkout Side Menu - OpenClose
+     const [isCheckoutSideMenuOpen,setIsCheckoutSideMenuOpen] = useState(false);
+     const openCheckoutSideMenu = () => setIsCheckoutSideMenuOpen(true);
+     const closeCheckoutSideMenu = () => setIsCheckoutSideMenuOpen(false);
+
     //ProductDetail - Show product
     const [productToSHow,setProductToSHow] = useState({});
+
+    //Shopping Cart - Add products to cart
+    const [cartProducts,setCartProducts] = useState([]);
 
 
     return(
@@ -24,7 +32,12 @@ export const ShoppingCartProvider = ({children}) => {
             closeProductDetail,
             isProductDetailOpen,
             productToSHow,
-            setProductToSHow
+            setProductToSHow,
+            cartProducts,
+            setCartProducts,
+            isCheckoutSideMenuOpen,
+            openCheckoutSideMenu,
+            closeCheckoutSideMenu
 
         }}>
             {children}
